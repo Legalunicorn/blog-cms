@@ -1,0 +1,17 @@
+
+.footer{
+    background-color: var(--color-primary);
+    color: #eee;
+    display:flex;
+    gap: 2rem;
+    font-family: Alata;
+}
+
+.footer-about{
+    width: 60%;
+    h2{
+        font-family: Alata;
+        font-size: 2rem;
+    }
+}
+

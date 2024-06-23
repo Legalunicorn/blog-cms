@@ -7,7 +7,11 @@
 
 
 //pages 
-
+import Home from './home/Home'
+import Dashboard from './dashboard/Dashboard'
+import Login from './login/Login'
+import Signup from './signup/Signup'
+import CreateArticle from './createArticle/CreateArticle'
 
 //context
 
@@ -21,17 +25,7 @@ import {
 
 //Layout for all pages
 
-function Layout(){
-    return (
-        <>
-            <Header/>
-            <div id="main">
-                <Outlet/>
-            </div>
-            <Footer/>
-        </>
-    )
-}
+
 
 const router = createBrowserRouter([
     {
@@ -50,9 +44,27 @@ const router = createBrowserRouter([
                 element:<Signup/>
             },
             {
-                path:"login",
+                path:"/login",
                 element:<Login/>
+            },
+            {
+                path:"/create",
+                element:<CreateArticle/>
             }
         ]
     }
 ])
+
+function Layout(){
+    return (
+        <>
+            <Header/>
+            <div id="main">
+                <Outlet/>
+            </div>
+            <Footer/>
+        </>
+    )
+}
+
+export default router

@@ -1,0 +1,35 @@
+.comment-card{
+    background-color: white;
+    padding: 0.3rem 1.2rem 0.8rem 0.2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+
+    .comment-meta{
+        display:flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 0.35rem;
+        span{
+            font-size: 2rem;
+        }
+
+
+    }
+    .comment-body{
+        padding-left: 0.5rem;
+        margin-top: 2rem;
+        white-space: pre-wrap;
+        font-family: Alata;
+        color: var(--font-grey)
+    }
+
+    .the-author{
+        color: var(--font-green);
+    }
+
+    .comment-date{
+        color: var(--font-grey);
+        font-size: 0.85rem;
+        font-style: italic;
+    }
+}
