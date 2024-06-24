@@ -2,8 +2,8 @@
 
 
 //layout comonents
-
-
+import Header from '../components/header/Header'
+import Footer from "../components/footer/Footer"
 
 
 //pages 
@@ -19,8 +19,7 @@ import CreateArticle from './createArticle/CreateArticle'
 //react router
 import {
     createBrowserRouter,
-    Outlet,
-    Nagivate
+    Outlet
 } from 'react-router-dom'
 
 //Layout for all pages

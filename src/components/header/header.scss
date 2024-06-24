@@ -1,5 +1,4 @@
 // @import "../../assets/styles/mixins.scss";
-@import "../../assets//styles/variables.scss";
 
 //i think use css root variables is better
 
@@ -14,11 +13,9 @@
 
 
 
-
 #header{
-    // color: #ffffff;
     background-color: #3e968b;
-    border-bottom: 2px solid $light-grey;
+    border-bottom: 2px solid #eee;
     display:flex;
     align-items: center;
     height:10vh;
