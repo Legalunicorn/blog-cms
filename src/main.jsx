@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.scss'
 
-import router from "./pages/routes"
+import router from "./pages/routing/routes"
 import { RouterProvider } from 'react-router-dom'
 import { AuthContextProvider } from './context/AuthContext'
 

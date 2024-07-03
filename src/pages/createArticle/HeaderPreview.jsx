@@ -32,7 +32,7 @@ export default function HeaderPreview({
                 <span>1</span>
             </div>
             <div className="preview-image">
-                <img src={image} alt="article_thumbnail" />
+                <img src={image} alt="" />
             </div>
 
         </div>

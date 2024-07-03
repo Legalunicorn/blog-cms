@@ -1,0 +1,116 @@
+.home-main{
+    // background-image: linear-gradient(to top, white, var(--color-primary));
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    background-color: rgb(133, 255, 218);
+    // min-width: 100vw;
+    min-width: 100%;
+    min-height: 100vh;
+    // display:flex;
+    // justify-content: center;
+    // align-items: center;
+    font-family: Inter;
+    // padding: 2rem;
+    // background-color: var(--color-primary);
+    
+}
+
+
+.home-primary{
+    // max-width: var(--max-content-width);
+    height: 100vh;
+    background-image: linear-gradient(to top, rgb(133, 255, 218), var(--color-primary));
+    background-color: var(--color-primary);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // width: 70%;
+    // margin-top: 5%;
+    text-align: center;
+    color: #eee;
+    h1{
+        // max-width: var(--max-content-width);
+        // max-width: 1000px;
+        font-family: Ubuntu;
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+        
+    }
+    a{
+        color: var(--font-grey);
+    }
+
+    .label{
+        // color: var(--color-primary);
+        color: #0e574b;
+        margin: 1.5rem 0; 
+        font-size: 1.2rem;
+
+    }
+
+    .button{
+        // border: 2px solid black;
+        margin: 2rem 0;
+        font-family: Alata;
+        font-size: 1.2rem;
+        padding: 0.5rem 1.5rem;
+        color: white;
+        color: var(--color-primary);
+        // background-color: var(--color-primary);
+        border: 3px solid var(--color-primary);
+        // border: 2px solid #;
+        border-radius: 0.4rem 0.8rem;
+        transition: 0.3s ease-in-out;
+
+
+        &:hover{
+            // color: var(--color-primary);
+            // background-color: white;
+            color: #eee;
+            background-color: var(--color-primary);
+            filter: drop-shadow(0 0 0.5rem var(--color-primary));
+            // border: 1px solid var(--color-primary);
+        }
+    
+    }
+
+
+}
+
+.home-secondary{
+    border-top-left-radius: 40% 15%;
+    border-top-right-radius: 40% 15%;
+    margin-top: auto;
+    padding: 5rem;
+    background-color: var(--color-primary);
+
+
+
+    h2{
+        color: #eee;
+        text-align: center;
+        font-size: 4rem;
+        font-family:Ubuntu;
+        padding: 1rem 0;
+    }
+}
+
+.features{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+
+
+
+@media (max-width: 800px){
+    .home-primary{
+        width: 100%;
+    }
+}
+

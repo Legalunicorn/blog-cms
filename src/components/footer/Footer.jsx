@@ -7,7 +7,7 @@ export default function Footer(){
         <div className="footer">
 
             <div className="footer-about">
-                <p>hi</p>
+                <p>Contact: nyeo700@gmail.com</p>
             </div>
             <div className="footer-links">
             </div>

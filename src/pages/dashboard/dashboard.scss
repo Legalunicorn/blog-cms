@@ -1,0 +1,39 @@
+.page-header{
+    font-family:Ubuntu,Inter,Arial;
+    font-size: 2.5rem;
+    // border-left: 3px solid black;
+    // padding-left: 1rem;
+    margin: 1.5rem 0;
+    // padding: 0.5rem;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.article-card-list{
+    padding: 1rem;
+    // background-color: #eee;
+    border-radius: 0.5rem;
+    width: 80vw;
+    max-width: 900px;
+    // border: 2px solid red;
+    // max-width: ;
+    // margin-left: auto;
+    // margin-right: auto;
+}
+
+.view-setter-dashboard{
+    margin-bottom: 1rem;
+    span{
+        font-family: Alata;
+        font-size: 1.4rem;
+        padding: 0.3rem;
+        margin: 1rem 0.5rem 1rem 0;
+        transition: 0.2s ease-in;
+        border: 3px solid white;
+    }
+
+    .selected-view{
+        color: var(--color-primary);
+        border-radius: 0.2rem;
+        border-bottom: 3px solid var(--color-primary);
+    }
+}

@@ -16,8 +16,8 @@ export default function Header(){
             <div id="header">
                 <div className="brand">
                     <img src={logo} alt="logo_img" />
-                    <Link className="site-brand" to={'/'}>AlgoRice</Link>
-                    <p>CMS</p>
+                    <Link className="site-brand" to={'/'}>AlgoRice • CMS</Link>
+                    {/* <p>CMS</p> */}
                 </div>
 
 
@@ -30,7 +30,7 @@ export default function Header(){
                     ):(
                         <>
                             <Link onClick={handleLogout} to={'/'}>Logout</Link>
-                            <Link to="/">Profile</Link>
+                            <Link to="/dashboard">Dashboard</Link>
                         </>
                     )}
                 </div>

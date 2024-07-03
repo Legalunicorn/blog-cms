@@ -47,6 +47,7 @@ body{
 }
 
 .content{
+    max-width: var(--max-content-width);
     display:flex;
     flex-direction: column;
     width: 90vw;
@@ -61,6 +62,13 @@ body{
 
 a{
     text-decoration: none;
+}
+
+button{
+    border: 0;
+    font-family:Inter;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
 }
 
 
