@@ -1,7 +1,7 @@
 //to take a string and produce markdown
 import Markdown from "react-markdown"
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-// import "./markdownPreview.scss"
+import "./markdownPreview.scss"
 
 export default function MarkdownPreview({
     body

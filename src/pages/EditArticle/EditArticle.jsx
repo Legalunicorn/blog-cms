@@ -18,7 +18,6 @@ export default function EditArticle(){
 
         const getArticle = async ()=>{
             try{
-                //TODO make a backend API 
                 const response = await customFetch(`/articles/protected/${id}`,{
                     method:"GET",
                     mode:"cors",
@@ -65,7 +64,7 @@ export default function EditArticle(){
     return (
         <>
             {loading?
-             <BeatLoad loading={loading} size='20'/>
+             <BeatLoad loading={loading} size='20px'/>
              :
              <CreateArticle
                 method="PATCH"

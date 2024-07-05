@@ -5,10 +5,14 @@
     display:flex;
     gap: 2rem;
     font-family: Alata;
+    padding: 2rem;
 }
 
 .footer-about{
     width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     h2{
         font-family: Alata;
         font-size: 2rem;

@@ -71,7 +71,7 @@
             // background-color: white;
             color: #eee;
             background-color: var(--color-primary);
-            filter: drop-shadow(0 0 0.5rem var(--color-primary));
+            // filter: drop-shadow(0 0 0.5rem var(--color-primary));
             // border: 1px solid var(--color-primary);
         }
     
@@ -81,11 +81,14 @@
 }
 
 .home-secondary{
-    border-top-left-radius: 40% 15%;
-    border-top-right-radius: 40% 15%;
+    // border-top-left-radius: 40% 15%;
+    // border-top-right-radius: 40% 15%;
     margin-top: auto;
+    
     padding: 5rem;
+    padding-bottom: 15rem;
     background-color: var(--color-primary);
+    background-color: rgb(27, 40, 48);
 
 
 

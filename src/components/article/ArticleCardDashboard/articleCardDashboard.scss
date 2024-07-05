@@ -1,9 +1,5 @@
 .article-card{
-    // border: 2px solid red;
-    // width: 900px;
-    // width: fit-content;
     display:flex;
-    // flex-wrap: wrap;
     gap: 0.5rem;
     border-bottom: 1px solid #eee;
     padding :1.3rem 1.1rem;
@@ -53,8 +49,9 @@
     }
     .article-image{
         object-fit:cover;
-        // aspect-ratio: 1/1;
+        // aspect-ratio: 1/1 ;
         width: 25%;
+        height: 90%;
         // height: 70%;
     }
 

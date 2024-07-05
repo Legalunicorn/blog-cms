@@ -1,6 +1,6 @@
 
 import { useAuthContext } from "../../hooks/useAuthContext"
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import { useEffect,useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { customFetch } from "../../utils/customFetch";
@@ -11,10 +11,8 @@ import BeatLoad from "../../components/util/BeadLoad";
 
 
 export default function Dashboard(){
-    const {dispatch} = useAuthContext();
+    
     const {user} = useAuthContext();  
-    const [searchParams,setSearchParams] =useSearchParams();
-
     const [posted,setPosted] = useState([]);
     const [drafted,setDrafted] = useState([]);
     const [view,setView] = useState('posted'); //posted or drafted
@@ -64,12 +62,8 @@ export default function Dashboard(){
     },[])
 
     const handleDelete = async (e) =>{
-        console.log("in del")
-
         const list = e.target.dataset.list;
         const id = e.target.dataset.id;
-        console.log(list);
-        console.log(id)
         try{
             const response = await customFetch(`/articles/${id}`,{
                 method:"DELETE",
@@ -83,10 +77,7 @@ export default function Dashboard(){
             const data = await response.json();
             console.log(response.ok)
             if (response.ok){
-                console.log(data);
-                console.log("npepepepe")
                 const data_id = data._id; //id of article delete shud be the same anyuways
-                console.log('DELETD-',data);
                 if (list=='posted'){
                     setPosted(posted.filter(post=>post._id!=data_id))
                 }
@@ -103,12 +94,7 @@ export default function Dashboard(){
         catch(err){
             setError(err.msg);
         }
-        //e.target.... -> id
-        //e.target. list? 
 
-        // make a delete request
-        // if request is successful
-        // update posted or drafted?
     }
 
 
@@ -118,15 +104,18 @@ export default function Dashboard(){
         <div className="content">
                 <p className="page-header">Dashboard</p>
                 <div className="view-setter-dashboard">
-                    <span className={view=="posted"?'selected-view':''} onClick={()=>setView('posted')}>Posted</span>
-                    <span className={view=="drafted"?'selected-view':''} onClick={()=>setView('drafted')}>drafted</span>
+                    <p className={view=="posted"?'selected-view':''} onClick={()=>setView('posted')}>Posted</p>
+                    <p className={view=="drafted"?'selected-view':''} onClick={()=>setView('drafted')}>drafted</p>
+                    <Link to={'/create'}>
+                    <p className="create-button">New</p>
+                    </Link>
                 </div>
 
                 <div className="article-card-list">
                 {error && <p>{error}</p>}
                     
                 {
-                loading? <BeatLoad loading={loading} size='20'/>:
+                loading? <BeatLoad loading={loading} size='20px'/>:
                 
                     view=='posted'?
                         posted.length>0?

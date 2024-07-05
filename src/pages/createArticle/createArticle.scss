@@ -1,3 +1,8 @@
+
+.create-article{
+}
+
+
 .create-form{
 
     display: flex;
@@ -18,7 +23,7 @@
         // padding: 0.3rem 0.3rem 0.3rem 0.1rem;
         border-radius: 0.4rem;
         padding: 1rem;
-        // background-color: white;
+        background-color: white;
 
         &:focus{
             transform: translateY(-0.1rem);
@@ -118,10 +123,17 @@ textarea{
 }
 
 .editable-tag{
-    color: var(--font-grey);
-    padding: 0.2rem 0.4rem;
+    
+    padding: 0.2rem 0.75rem;
     width: fit-content;
+
+    color: var(--font-grey);
     border: 2px solid #eee;
+
+    background-color: var(--color-primary);
+    color: #eee;
+    border: 2px solid white;
+
     border-radius: 1.2rem;
     align-items: center;
     display: flex;
@@ -134,7 +146,8 @@ textarea{
         font-size: 1rem;
 
         &:hover{
-            background-color: #eee;
+            background-color: rgba(218, 61, 61, 0.548);
+            // background-color: #eee;
         }
     }
 }
@@ -156,6 +169,11 @@ textarea{
             // border-radius: 0.7rem;
             border: 2px solid #eee;
             background-color: white;
+
+            &:active{
+                transform: scale(1.05);
+                border: 2px solid var(--color-primary);
+            }
         }
 
         &.button-post{
@@ -179,3 +197,6 @@ textarea{
         }
     }
 }
+
+// .article-preview{
+// }

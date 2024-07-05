@@ -32,12 +32,9 @@ export default function CreateArticle({article,method}){
         image:"",
         body:""
     }
+   
 
     const [values,setValues] = useState(article ? article: blank) //either default or other values 
-
-    console.log('hi');
-    console.log(values);
-
     const handleSubmit = async (e) =>{
         const draft = e.target.dataset.submittype=="draft" //else is post
 
@@ -48,16 +45,7 @@ export default function CreateArticle({article,method}){
         } else{
 
             try{
-                //if you want to PATCH, there is a need for the article id 
-                //which i can get from the URL
-                //but not practical if i want to use slugify for my urls
-
-                // i should pass the article id in the props
-                // if the method = PATCH, the id is inside the props
-
-                // if the method = POST , and article = blank, there is no id but we wont check for it 
-                console.log('hi',values);
-
+ 
                 const url = method=="POST" ? '/articles' : `/articles/${article.id}`
                 const res = await customFetch(url,{
                     method:method, //depends on the propcre
@@ -77,12 +65,14 @@ export default function CreateArticle({article,method}){
 
                 const data = await res.json();
                 if (res.ok){
-                    console.log("Post has been sucessfully POSTED")
+                    console.log("Post has been sucessfully POSTED/DRAFT")
                     console.log(data);
-                    navigate('/dashboard')
+                    console.log(method,'oasdada')
+                    if (draft!='draft') navigate('/dashboard')
                 }
                 else{
                     if (data.error){
+                        console.log("oi fucker",data.error);
                         setError(data.error) //??
                     }
                     if (data.errors){ //from express-validator. I alrdy have FE validatio in place
@@ -96,6 +86,7 @@ export default function CreateArticle({article,method}){
                 }
 
             } catch(err){
+                console.log("oi fk")
                 console.log(err);
                 setError(err.message);
             }
@@ -103,18 +94,29 @@ export default function CreateArticle({article,method}){
         }
     }
 
+    // const testH = (e)=>{
+    //     console.log("HEYYY")
+    //     console.log(e.keyCode)
+    //     console.log(e.ctrlKey)
+    //     if (e.keyCode==192 && e.ctrlKey){
+    //         if (view=='edit') setView('preview')
+    //         else setView('edit')
+    //         console.log("bingus")
+    //     }
+    // }
+
 
     return(
-        <div className="content">
+        <div  className="content create-article">
 
             <div className="view-setter">
                 <p 
-                    className={view=="edit" && 'selected-view'}
+                    className={view=="edit"?  'selected-view':''}
                     onClick={()=>setView('edit')}>
                     Edit
                 </p>
                 <p 
-                    className={view=="preview" && 'selected-view'}
+                    className={view=="preview" ?'selected-view':''}
                     onClick={()=>setView('preview')}>
                     Preview
                 </p>                
@@ -148,7 +150,7 @@ export default function CreateArticle({article,method}){
                 </>
    
                 :
-                <div className="article-preview">
+                <div  className="article-preview">
                 <HeaderPreview
                     title={values.title}
                     image={values.image}
@@ -167,30 +169,3 @@ export default function CreateArticle({article,method}){
     )
 }
 
-/*
-create article
-
-
---new article--
-
-POST
-    - send a post request to create the article
-    - is_drafted: false
-
-DRAFT
-    - send a post request to create the article
-    - is_drafted: true
-
-
-
--- edit article--
-
-POST
-    - send a patch request to make changes to the article
-    - set is_drafted: false (if it was already false then nothing will change)
-
-DRAFT
-    - send a patch reqeust to make changes to the article
-    - set is_drafted: true
-
-*/

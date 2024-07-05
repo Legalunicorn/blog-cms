@@ -18,7 +18,7 @@ export default function Error404(){
             <div className="error-box">
                 <img onClick={handleClick} src={logo} alt="logo"></img>
                 <h1>Uh-oh, page not found!</h1>
-                <p>The page you're looking for isn't here. Let's take you back to safty!</p>
+                <p>The page you're looking for isn't here. Let's take you back to safety!</p>
             </div>
            
         </div>

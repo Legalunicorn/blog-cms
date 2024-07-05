@@ -10,7 +10,7 @@ export default function Home(){
         <div className="home-main">
             <div className="home-primary">
                 <h1>Welcome to AlgoRiceCMS</h1>
-                <p className="label">Manage your posts in AlgoRice with our dashboard and editor. </p>
+                <p className="label">Manage your posts in AlgoRice with our dashboard and editor. Please note that only writers are allowed to draft/post, but everyone is free to write whatever and preview how their post will look like</p>
                 <Link class="button" to="/create">Create</Link>
 
 

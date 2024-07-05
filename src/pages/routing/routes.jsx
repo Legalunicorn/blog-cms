@@ -18,12 +18,6 @@ import Error404 from '../Error/Error404'
 //Protected Route
 import { ProtectedRoute } from './ProtectedRoute'
 
-// //context
-import { useAuthContext } from '../../hooks/useAuthContext'
-
-
-// const {user} = useAuthContext();
-
 
 //react router
 import {
@@ -32,18 +26,6 @@ import {
 } from 'react-router-dom'
 
 
-
-/**
- * Protected routes
- *  - Dashboard
- *  
- * Unprotected
- *  - Home
- *  - Login
- *  - Register
- *  - Create
- *  - About
- */
 const router = createBrowserRouter([
     {
         element: <Layout/>,

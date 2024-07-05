@@ -13,7 +13,6 @@ export default function Signup(){
 
 
     const handleSubmit = async (e)=>{
-        //TODO validate the username, ONLY alphanumeric characters are allowed, along with "." and "_" 
         e.preventDefault();
         try{
             const response = await customFetch("/auth/email/signup",{

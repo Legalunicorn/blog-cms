@@ -7,7 +7,11 @@ export default function Footer(){
         <div className="footer">
 
             <div className="footer-about">
-                <p>Contact: nyeo700@gmail.com</p>
+            <span class="material-symbols-outlined">
+            mail
+            </span>
+                <span> nyeo700@gmail.com</span>
+                
             </div>
             <div className="footer-links">
             </div>

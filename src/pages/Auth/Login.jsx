@@ -15,11 +15,7 @@ export default function Login(){
 
 
     useEffect(()=>{
-        //BUG somehow keep redirecting here
-        // console.log("IN LOGIn")
-        // if(user){
-        //     navigate('/dashboard');
-        // }
+
         console.log("LOGIN PAGE: USER IS: ",user)
         const token = searchParams.get('token');
         const id = searchParams.get('id');
@@ -52,9 +48,11 @@ export default function Login(){
             if (response.ok){
                 dispatch({type:"LOGIN",payload:{token:json,id:json.id}})
                 localStorage.setItem('user',JSON.stringify({token:json.token,id:json.id}))
-                nagivate("/");
+                navigate("/");
             }
             else{
+                console.log("///")
+                console.log(json)
                 if (json.errors){ //validation err?
                     json.errors.forEach(err=>{
                         console.log(err);
