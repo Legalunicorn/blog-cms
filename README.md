@@ -1,6 +1,14 @@
 # CMS for Blog API Project
 Content Management System built with ReactJS
 
+### Live at: [blog cms](https://algorice-cms.vercel.app)
+
+Viewer live at: [blog_viewer](https://algorice-viewer.vercel.app/)
+
+link to [blog_api repo](https://github.com/Legalunicorn/blog-api)
+
+link to [blog_view repo](https://github.com/Legalunicorn/blog-viewer)
+
 ## Key features
 #### 1. Integration with markdown to format 
 
