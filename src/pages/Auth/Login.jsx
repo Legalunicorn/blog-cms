@@ -15,7 +15,6 @@ export default function Login(){
 
 
     useEffect(()=>{
-
         console.log("LOGIN PAGE: USER IS: ",user)
         const token = searchParams.get('token');
         const id = searchParams.get('id');
