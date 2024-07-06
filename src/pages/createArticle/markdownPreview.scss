@@ -8,6 +8,10 @@
         color: rgb(12, 88, 71);
     }
 
+    ul{
+        margin-left: 1.1rem;
+    }
+
     h2{
         font-size: 2rem;
         // color: var(--color-primary);
@@ -20,6 +24,7 @@
     h4{ font-size: 1.3rem;}
 
     h1,h2,h3,h4{
+        line-height: 2.5rem;
         margin: 4rem 0 1.5rem 0;
     }
 
