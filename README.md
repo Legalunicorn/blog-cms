@@ -1,15 +1,30 @@
-//TODO make a custom useFetch 
-returns {data,loading,error}
+# CMS for Blog API Project
+Content Management System built with ReactJS
+
+## Key features
+#### 1. Integration with markdown to format 
 
 
+![md_preview](./public/preview_md.png)
 
-Set some rules for the TODO
-- writers can edit their posts 
-- writers CANNOT delete or edit comments not belonging to them
-- writers 
+#### 2. Sign in with email or with google account
+
+![login_previiw](./public/login_preview.png)
+
+#### 3. Preview your work before you post
+
+![preview_preview](./public/preview_preview.png)
 
 
-https://algorice-cms.vercel.app/login/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NzI0MDJlNmQ0MTk3NTcyZmVlNTUwZiIsImlhdCI6MTcyMDI0MzM0MCwiZXhwIjoxNzIwNDE2MTQwfQ.FY7x47ThejbfRLCHbf5o6tsT5NnWeF8z-sjdeTUIqY0&id=6672402e6d4197572fee550f
+#### 4. Dashboard to manage articles that are drafted or posted
+
+![previw_dashboard](./public/preview_dashboard.png) 
 
 
-https://algorice-cms.vercel.app/login
+## Dependencies
+
+- **date-fns** (format date of article with relative distance to now)
+- **react-markdown** (ptocess markdown into formatted html elements)
+- **react-syntax-highlighter** (used with react markdown to highlight syntax of code elements)
+- **react-router-dom** (add client side routing)
+- **react-spinners** (loading animation library)
